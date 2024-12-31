@@ -1,71 +1,32 @@
-// import express, { Request, Response }  from 'express'
+import express, { Request, Response }  from 'express'
 
-// const app = express();
-// // import cookieParser from "cookie-parser";
-// const port = 3000;
-
-
-// //parsers
-// app.use(express.json());
-// // app.use(cookieParser());
+const app = express();
+// import cookieParser from "cookie-parser";
+const port = 3000;
 
 
-// app.get('/', (req: Request, res: Response) => {
-//   res.send('Hello Developers!')
-// });
-
-// app.post("/product", (req: Request, res: Response) =>{
-//   // console.log(req.body);
-//   res.send({
-//     message:"Success"
-//   });
-// });
+//parsers
+app.use(express.json());
+// app.use(cookieParser());
 
 
-// // app.post("/notfound", (req, res) => {
-// //   console.log("hello");
-// //   try {
-   
-// //     res.send({
-// //       message: "Success"
-// //     });
-// //   } catch (error) {
-// //     console.error(error);
-// //     res.status(500).send({ message: "Internal Server Error" });
-// //   }
-// // });
+app.get('/', (req: Request, res: Response) => {
+  res.send('Hello Developers!')
+});
+
+app.post("/", (req: Request, res: Response) =>{
+  console.log(req.body);
+  res.send({
+    message:"Success"
+  });
+});
 
 
-// export default app;
+
+
+export default app;
 
 
 
 
 
-
-import express, { Request, Response } from "express"
-const app = express() 
-
-// parser
-app.use(express.json())
-
-
-
-app.post("/product",async(req:Request,res:Response)=>{
-
-  console.log("data")
-
-  res.send(req.body)
-
-})
-
-
-app.get('/', async(req:Request, res:Response) => {
-  res.send('Hello World Now 5!')
-})
-
-
-
-
-
-export default app

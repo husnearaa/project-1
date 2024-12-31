@@ -3,7 +3,8 @@
  * 
  * to do run typescript:
  * "tsc"  command
- * node ./dist/app/server.js
+ * node ./dist/app/server.js or
+ ts-node-dev --respawn --transpile-only server.ts
  * 
  * 
  * "tsc -w" by this command we change the ts file updated code in to js file.
